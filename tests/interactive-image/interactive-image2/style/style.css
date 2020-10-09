@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  border:0;
+  padding:0;
+}
+
+body {
+  font-family: Georgia, Serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: .5rem 0;
+}
+
+#viewport {
+  position: fixed; 
+  overflow: hidden;
+  left: 1px;
+  top: 1px;
+  width: calc(100vw - 2px);
+  height: calc(100vh - 2px); 
+  /*border: 1px dashed #000;*/
+  background-color: #fff;
+}
+
+#draggableContent {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  cursor: grab;
+}
+
+.image {
+  position:absolute;
+  top: 0;
+  left:0;
+}
+
+.imageArea {
+  position: absolute;
+  background-color: white;
+  border: 2px solid black;
+}
+
+a:hover .imageArea {
+  cursor: pointer;
+}
+
+.highlightArea {
+  position: absolute;
+  background-color: blue;
+  opacity: .25;
+}
+
+a:hover .highlightArea {
+  opacity:.5;
+  cursor: pointer;
+}
+
+.interactiveImage {
+
+}
+
+.popup {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  top:0;
+  left:0;
+  overflow-y: auto;
+  padding:1em;
+  width:calc(100% - 2em - 2px);
+  height:calc(100% - 2em - 2px);
+  border: 1px dashed #000;
+  background-color:#fff;
+}
+
+.show {
+  display: block!important;
+  visibility: visible!important;
+}
+
+.closeButtonWrapper {
+  height: 2.5em;
+  text-align: right;
+}
+
+.closeButton {
+  z-index: 99999;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 4px;
+  border: 1px solid #000;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+.closeButton:hover {
+  background-color: blue;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.contentWrapper {
+  max-width: 100%;
+  text-align: left;
+}
+
+.iframeWrapper {
+  position: relative;
+}
+
+.videoWrapper {
+  padding-bottom: 56.25%;
+}
+
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#area1 {
+  top: 150px;
+  left: 675px;
+  width: 250px;
+  height: 250px;
+
+  transition-timing-function: ease-out;
+  transition: 2s;
+  transform: translateY(0);
+}
+
+#area1:hover {
+  transition-timing-function: ease-in;
+  transition: 2s;
+  transform: translateY(30%);
+}
+
+
+#area2 {
+  top: 500px;
+  left: 350px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#area3 {
+  top: 450px;
+  left: 1075px;
+  width: 250px;
+  height: 250px;
+
+  transform: rotate(45deg);
+}
+
+#area3:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #f70d8a;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
+#area4 {
+  top: 850px;
+  left: 650px;
+  width: 250px;
+  height: 250px;
+}
+
+.correction45 {
+  transform: rotate(-45deg);
+}
+
+.imageArea img.inPlace {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.imageArea img.staticGif {
+  visibility: visible;
+}
+
+.imageArea:hover img.staticGif {
+  visibility: hidden;
+}
+
+.imageArea img.movingGif {
+  visibility: hidden;
+}
+
+.imageArea:hover img.movingGif {
+  visibility: visible;
+}
+
+@media (min-width: 576px) { 
+
+}
+
+
+@media (min-width: 768px) { 
+  .contentWrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: 992px) { 
+
+}
+
+
+@media (min-width: 1200px) { 
+
+}

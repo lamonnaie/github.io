@@ -1,0 +1,130 @@
+@font-face {
+font-family: "Euclid Flex";
+src: url("css/EuclidFlexMedium.otf");
+}
+
+div {
+	width: 150px;
+    height: 200px;
+    display:inline-block;
+}
+
+body {
+	width:100vw;
+	height:100vh;
+	margin: 0;
+}
+
+p {
+	color:#ffffff;
+	font-family: 'Euclid Flex', Helvetica, sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+img {
+	opacity: 0.7;
+}
+
+.sub {
+	font-size: 1em;
+	
+	opacity:0;
+    visibility:visible;
+    display:block;
+
+    animation-delay: 2s;
+
+    -moz-animation-name: fadeIn;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in;
+	-moz-animation-duration: 2s;
+	-moz-animation-fill-mode: forwards;
+
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+
+	animation-name: fadeIn;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+
+@-moz-keyframes fadeIn {
+	from  {  opacity: 0; }
+	to {  opacity: 1; }
+
+}
+@-webkit-keyframes fadeIn {
+	from  {  opacity: 0; }
+	to {  opacity: 1; }
+}
+@keyframes fadeIn {
+	from  {  opacity: 0; }
+	to {  opacity: 1; }
+}
+
+.wrapper {
+	position: absolute;
+	width: 100vw;
+	height: 200px;
+	margin: auto;
+	margin-top: calc(50vh - 100px);
+	display: block;
+	text-align: center;
+}
+
+.textwrapper {
+	z-index: 2;
+	position: absolute;
+	width: 100vw;
+	margin: auto;
+	margin-top: calc(100px - 3em);
+	display: block;
+	text-align: center;
+}
+
+.top{
+	z-index:1;
+	background: #000000;
+	position:relative;
+	animation:animatetop 2s;
+	animation-delay: 0s
+}
+
+	@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+
+.left{
+	z-index:1;
+	background: #000000;
+	position:relative;
+	animation:animatebottom 2s;
+	animation-delay: 0s
+}
+
+	@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+
+.right{
+	z-index:1;
+	background: #000000;
+	position:relative;
+	animation:animatetop 2s;
+	animation-delay: 0s
+}
+
+	@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+
+.bottom{
+	z-index:1;
+	background: #000000;
+	position:relative;
+	animation:animatebottom 2s;
+	animation-delay: 0s
+}
+
+	@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}

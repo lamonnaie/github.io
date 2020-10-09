@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+main {
+	
+}
+
+main img {
+	width: 100%;
+}
+
+#left, #right {
+	position: absolute;
+	top: calc(50% - 2rem);
+	padding: .5rem;
+	height: 1rem;
+	background-color: #fff295;
+	text-align: center;	
+}
+
+#left {
+	left: 0;
+}
+
+#right {
+	right:0;
+}
+
+#left:hover, #right:hover {
+	background-color: #000;
+	color: #fff295;
+	cursor:pointer;
+}
+
+wrapper {
+	position: absolute;
+	bottom: 1rem;
+	width: 100%;
+}
+
+#caption {
+	margin: 0 auto;
+	padding: 5px;
+	box-shadow: 5px 5px;
+	padding: .5rem;
+	width: 80%;
+	text-align: center;
+	background-color: #fff295;
+}
